@@ -14,5 +14,6 @@ public class CalculadoraDescuentos {
         double a = 1;
         a = 1;
         a = 1;
+        a = 2 + 1;
     }
 }
