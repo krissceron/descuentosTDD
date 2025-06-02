@@ -30,13 +30,12 @@ public class CalculadoraDescuentos {
   }
 
   /**
-   * Performs a sample operation with hardcoded values.
-   * This method currently serves as a placeholder and does not return any value.
+   * Returns a boolean indicating a sample operation result.
+   * This method currently serves as a placeholder and always returns true.
+   *
+   * @return true as a placeholder result
    */
-  public static void otroMetodo() {
-    double a = 1;
-    a = 1;
-    a = 1;
-    a = 2 + 1 + 1;
+  public static boolean otroMetodo() {
+    return true;
   }
 }

@@ -1,17 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CalculadoraDescuentos.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">descuentosTDD</a> &gt; <a href="index.source.html" class="el_package">com.ejemplo</a> &gt; <span class="el_source">CalculadoraDescuentos.java</span></div><h1>CalculadoraDescuentos.java</h1><pre class="source lang-java linenums">package com.ejemplo;
 
-<span class="nc" id="L3">public class CalculadoraDescuentos {</span>
-    public static double aplicarDescuentoPorcentaje(double monto,double porcentaje) {
-<span class="fc bfc" id="L5" title="All 2 branches covered.">        if (porcentaje&gt;100) return 0;</span>
-<span class="fc" id="L6">        return monto-(monto*porcentaje/100); // hardcoded para pasar el test</span>
+/**
+ * Provides methods for applying discounts to monetary amounts.
+ */
+<span class="nc" id="L6">public class CalculadoraDescuentos {</span>
+  /**
+   * Applies a percentage-based discount to a given amount.
+   *
+   * @param monto      the original amount
+   * @param porcentaje the discount percentage to apply (must be between 0 and 100)
+   * @return the amount after applying the discount, or 0 if the percentage is invalid (&gt; 100)
+   */
+  public static double aplicarDescuentoPorcentaje(double monto, double porcentaje) {
+<span class="fc bfc" id="L15" title="All 2 branches covered.">    if (porcentaje &gt; 100) {</span>
+<span class="fc" id="L16">      return 0;</span>
     }
+<span class="fc" id="L18">    return monto - (monto * porcentaje / 100);</span>
+  }
 
-    public static double aplicarDescuentoFijo(double monto,double descuento) {
-<span class="nc" id="L10">        return monto-descuento;</span>
-    }
+  /**
+   * Applies a fixed discount to a given amount.
+   *
+   * @param monto     the original amount
+   * @param descuento the fixed discount amount to subtract
+   * @return the amount after applying the fixed discount
+   */
+  public static double aplicarDescuentoFijo(double monto, double descuento) {
+<span class="fc" id="L29">    return monto - descuento;</span>
+  }
 
-    public static void otroMetodo() {
-
-<span class="nc" id="L15">    }</span>
+  /**
+   * Performs a sample operation with hardcoded values.
+   * This method currently serves as a placeholder and does not return any value.
+   */
+  public static void otroMetodo() {
+<span class="fc" id="L37">    double a = 1;</span>
+<span class="fc" id="L38">    a = 1;</span>
+<span class="fc" id="L39">    a = 1;</span>
+<span class="fc" id="L40">    a = 2 + 1 + 1;</span>
+<span class="fc" id="L41">  }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

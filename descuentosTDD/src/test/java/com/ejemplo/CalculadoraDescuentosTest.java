@@ -18,4 +18,14 @@ public class CalculadoraDescuentosTest {
     public void testDescuentoPorcentaje200() {
         assertEquals(0, CalculadoraDescuentos.aplicarDescuentoPorcentaje(100.0, 200.0));
     }
+
+    @Test
+    public void testDescuentoFijo() {
+        assertEquals(95.0, CalculadoraDescuentos.aplicarDescuentoFijo(100.0, 5.0));
+    }
+
+    @Test
+    public void testOtroMetodo() {
+        CalculadoraDescuentos.otroMetodo();
+    }
 }
